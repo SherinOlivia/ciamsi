@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://x8wcaf6fjdtl"]
+
+[ext_resource type="Texture2D" uid="uid://c0tf0w0ml8wlc" path="res://assets/images/draft-background.jpeg" id="1_gguwv"]
+[ext_resource type="Texture2D" uid="uid://ss62t6d6rvpb" path="res://assets/images/draft-altar.png" id="2_8csw6"]
+[ext_resource type="Texture2D" uid="uid://t7yp78elyqiw" path="res://assets/images/draft-cushion.png" id="3_wx3nk"]
+
+[node name="cushionStartScene" type="Node" unique_id=93469513]
+
+[node name="zoomedInBackground" type="TextureRect" parent="." unique_id=714311400]
+offset_left = -459.0
+offset_top = -535.0
+offset_right = 1259.0
+offset_bottom = 1435.0
+mouse_filter = 2
+texture = ExtResource("1_gguwv")
+expand_mode = 1
+
+[node name="zoomedInAltarButton" type="TextureButton" parent="." unique_id=332006609]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -509.0
+offset_top = -1266.0
+offset_right = -118.0
+offset_bottom = -543.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+mouse_filter = 2
+texture_normal = ExtResource("2_8csw6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=37785716]
+offset_left = -866.0
+offset_top = 908.0
+offset_right = -126.666626
+offset_bottom = 1194.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_wx3nk")

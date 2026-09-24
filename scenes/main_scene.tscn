@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://d3y6s2nocb1ng"]
+
+[ext_resource type="Script" uid="uid://expx5qnfxesm" path="res://scripts/main_scene.gd" id="1_c16ls"]
+[ext_resource type="Texture2D" uid="uid://c0tf0w0ml8wlc" path="res://assets/images/draft-background.jpeg" id="2_gubc5"]
+[ext_resource type="Texture2D" uid="uid://t7yp78elyqiw" path="res://assets/images/draft-cushion.png" id="3_rt2n2"]
+[ext_resource type="Texture2D" uid="uid://ss62t6d6rvpb" path="res://assets/images/draft-altar.png" id="4_c16ls"]
+[ext_resource type="Texture2D" uid="uid://4aoqj2g6e1kt" path="res://assets/images/book-cover.svg" id="5_gubc5"]
+[ext_resource type="Script" uid="uid://bh1xy5wn54oqq" path="res://scripts/outside_tap_area.gd" id="6_c16ls"]
+[ext_resource type="Script" uid="uid://b7g1re0u38mo8" path="res://scripts/info_pop_up.gd" id="7_18nlu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j738q"]
+bg_color = Color(0.14117648, 0.10980392, 0.08627451, 0.73333335)
+
+[node name="MainScene" type="Node2D" unique_id=899905737]
+script = ExtResource("1_c16ls")
+
+[node name="Background" type="TextureRect" parent="." unique_id=442932757]
+offset_right = 717.0
+offset_bottom = 1278.0
+mouse_filter = 2
+texture = ExtResource("2_gubc5")
+expand_mode = 1
+
+[node name="tutorialButton" type="TextureButton" parent="." unique_id=260093237]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.279
+anchor_right = 1.0
+anchor_bottom = 0.279
+offset_left = 591.99994
+offset_top = 302.99997
+offset_right = 1104.0
+offset_bottom = 815.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+action_mode = 0
+texture_normal = ExtResource("5_gubc5")
+
+[node name="AltarButton" type="TextureButton" parent="." unique_id=1879041522]
+offset_left = 153.0
+offset_top = 286.0
+offset_right = 544.0
+offset_bottom = 1009.0
+action_mode = 0
+texture_normal = ExtResource("4_c16ls")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PuaPuiButton" type="TextureButton" parent="." unique_id=553340172]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.279
+anchor_right = 1.0
+anchor_bottom = 0.279
+offset_left = 294.00003
+offset_top = 939.0
+offset_right = 806.0
+offset_bottom = 1451.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+action_mode = 0
+texture_normal = ExtResource("5_gubc5")
+
+[node name="ShakeSticksButton" type="TextureButton" parent="." unique_id=989280532]
+anchors_preset = -1
+offset_left = 520.99994
+offset_top = 895.0
+offset_right = 1033.0
+offset_bottom = 1407.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+action_mode = 0
+texture_normal = ExtResource("5_gubc5")
+
+[node name="CushionButton" type="TextureButton" parent="." unique_id=1551235403]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.99997
+offset_top = 1062.0
+offset_right = 913.0
+offset_bottom = 1348.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3_rt2n2")
+
+[node name="TextureRect" type="TextureRect" parent="CushionButton" unique_id=1408895173]
+visible = false
+layout_mode = 0
+offset_left = -755.0
+offset_top = 129.99997
+offset_right = -23.0
+offset_bottom = 416.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_rt2n2")
+
+[node name="tutorialPopUp" type="Panel" parent="." unique_id=542680517]
+visible = false
+offset_right = 500.0
+offset_bottom = 500.0
+
+[node name="CloseButton" type="Button" parent="tutorialPopUp" unique_id=146603233]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.279
+anchor_right = 1.0
+anchor_bottom = 0.279
+offset_left = -630.0
+offset_top = -198.61996
+offset_right = -118.0
+offset_bottom = 313.38
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+action_mode = 0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=999983814]
+
+[node name="OutsideTapArea" type="Control" parent="UI" unique_id=596296031]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_c16ls")
+
+[node name="InfoPopUp" type="Panel" parent="UI" unique_id=333382712]
+visible = false
+offset_left = 157.0
+offset_top = 793.0
+offset_right = 517.0
+offset_bottom = 933.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j738q")
+script = ExtResource("7_18nlu")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/InfoPopUp" unique_id=909138728]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 361.0
+offset_bottom = 139.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/InfoPopUp/MarginContainer" unique_id=528550988]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="UI/InfoPopUp/MarginContainer/VBoxContainer" unique_id=1895501801]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="UI/InfoPopUp/MarginContainer/VBoxContainer" unique_id=1022190286]
+custom_minimum_size = Vector2(280, 80)
+layout_mode = 2

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dt4etjtiecni1"]
+
+[ext_resource type="PackedScene" uid="uid://d3y6s2nocb1ng" path="res://scenes/main_scene.tscn" id="1_0wfyh"]
+
+[node name="mainView" type="Control" unique_id=2109244893]
+layout_mode = 3
+anchor_right = 0.99600005
+anchor_bottom = 0.99700004
+offset_right = -0.12005615
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MainScene" parent="." unique_id=806304500 instance=ExtResource("1_0wfyh")]
